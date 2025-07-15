@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Word_Trainer',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

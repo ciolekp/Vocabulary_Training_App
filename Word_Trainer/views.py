@@ -3,6 +3,13 @@ from django.shortcuts import render, redirect
 from .models import Word
 from .forms import WordForm
 import random
+from rest_framework import viewsets
+from .serializers import WordSerializer
+
+
+class WordViewSet(viewsets.ModelViewSet):
+    queryset = Word.objects.all()
+    serializer_class = WordSerializer
 
 def learn_english(request):
     words = list(Word.objects.all())
