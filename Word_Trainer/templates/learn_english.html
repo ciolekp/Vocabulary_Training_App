@@ -1,6 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Logowanie{% endblock %}
+
+{% block content %}
 <h2>Jak po polsku: {{ word.english }}?</h2>
 <form method="get">
     <button type="submit">Następne słowo</button>
 </form>
 <a href="/learn_polish/">Z polskiego na angielski</a>
 <a href="/add_word/">Dodaj nowe słowo</a>
+{% endblock %}
