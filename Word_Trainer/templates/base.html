@@ -4,13 +4,13 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Aplikacja do nauki słówek{% endblock %}</title>
+    <title>{% block title %}Aplikacja do powtarzania słówek{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
         <img src="{% static 'images/logo.jpg' %}" alt="Banner aplikacji">
-        <h1>Aplikacja do nauki angielskich słówek</h1>
+        <h1>Aplikacja do powtarzania słówek</h1>
         <nav>
             {% if user.is_authenticated %}
                 Witaj, {{ user.username }} |
