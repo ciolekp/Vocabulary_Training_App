@@ -48,9 +48,6 @@ def add_word(request):
         form = WordForm()
     return render(request, 'add_word.html', {'form':form})
 
-
-
-
 class WordViewSet(viewsets.ModelViewSet):
     queryset = Word.objects.all()
     serializer_class = WordSerializer
