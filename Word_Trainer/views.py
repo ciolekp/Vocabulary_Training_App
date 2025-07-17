@@ -1,20 +1,12 @@
 from django.shortcuts import render, redirect
-# from django.contrib.auth.decorators import login_required
 from .models import Word
 from .forms import WordForm
+from .serializers import WordSerializer
 import random
 from rest_framework import viewsets
-from .serializers import WordSerializer
-
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
-
-
-class WordViewSet(viewsets.ModelViewSet):
-    queryset = Word.objects.all()
-    serializer_class = WordSerializer
 
 def register(request):
     if request.method == 'POST':
@@ -56,3 +48,9 @@ def add_word(request):
         form = WordForm()
     return render(request, 'add_word.html', {'form':form})
 
+
+
+
+class WordViewSet(viewsets.ModelViewSet):
+    queryset = Word.objects.all()
+    serializer_class = WordSerializer
